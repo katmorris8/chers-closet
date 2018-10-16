@@ -89,10 +89,10 @@ const main = async () => {
   });
 
   const user = await User.create({
-    firstName: 'Kat',
-    lastName: 'Morris',
-    username: 'kat',
-    password: 'kat',
+    firstName: 'User',
+    lastName: 'Admin',
+    username: 'admin',
+    password: 'letmein',
     emailAddress: 'kathryn.leigh.morris@gmail.com'
   })
 
