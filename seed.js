@@ -4,74 +4,74 @@ const main = async () => {
   const top1 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top1',
+    imageUrl: '/images/top1.jpg',
   });
   const top2 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top2',
+    imageUrl: '/images/top2.jpg',
   });
   const top3 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top3',
+    imageUrl: '/images/top3.jpg',
   });
   const top4 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Madewell',
-    imageUrl: '/images/top4',
+    imageUrl: '/images/top4.jpg',
   });
   const top5 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Madewell',
-    imageUrl: '/images/top5',
+    imageUrl: '/images/top5.jp2',
   });
 
   const bottom1 = await Clothes.create({
     clothesType: 'Bottoms',
     storePurchased: 'Madewell',
-    imageUrl: '/images/bottom1',
+    imageUrl: '/images/bottom1.jp2',
   });
   const bottom2 = await Clothes.create({
     clothesType: 'Bottoms',
     storePurchased: 'Madewell',
-    imageUrl: '/images/bottom2',
+    imageUrl: '/images/bottom2.jp2',
   });
   const bottom3 = await Clothes.create({
     clothesType: 'Bottoms',
     storePurchased: 'Everlane',
-    imageUrl: '/images/bottom3',
+    imageUrl: '/images/bottom3.jpg',
   });
   const bottom4 = await Clothes.create({
     clothesType: 'Bottoms',
     storePurchased: 'Everlane',
-    imageUrl: '/images/bottom4',
+    imageUrl: '/images/bottom4.jpg',
   });
   const bottom5 = await Clothes.create({
     clothesType: 'Bottoms',
     storePurchased: 'Madewell',
-    imageUrl: '/images/bottom5',
+    imageUrl: '/images/bottom5.jpg',
   });
 
   const shoes1 = await Clothes.create({
     clothesType: 'Shoes',
     storePurchased: 'Vince',
-    imageUrl: '/images/shoes1',
+    imageUrl: '/images/shoes1.jpg',
   });
   const shoes2 = await Clothes.create({
     clothesType: 'Shoes',
     storePurchased: 'Madewell',
-    imageUrl: '/images/shoes2',
+    imageUrl: '/images/shoes2.jpg',
   });
   const shoes3 = await Clothes.create({
     clothesType: 'Shoes',
     storePurchased: 'Sam Edelman',
-    imageUrl: '/images/shoes3',
+    imageUrl: '/images/shoes3.jpg',
   });
   const shoes4 = await Clothes.create({
     clothesType: 'Shoes',
     storePurchased: 'Rebecca Minkoff',
-    imageUrl: '/images/shoes4',
+    imageUrl: '/images/shoes4.jpg',
   });
 
   const user = await User.create({
