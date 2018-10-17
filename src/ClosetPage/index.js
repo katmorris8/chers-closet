@@ -11,8 +11,8 @@ export default class ClosetPage extends Component {
   }
 
   componentDidMount = async () => {
-    const getClothes = await (await fetch("/api/closet", {
-      method: "GET",
+    const getClothes = await (await fetch('/api/closet', {
+      method: 'GET',
     })).json();
 
     this.setState({
@@ -23,9 +23,10 @@ export default class ClosetPage extends Component {
   render() {
     return (
       <div>
+        <h1>My Closet</h1>
         {this.state.clothes.map(clothes => {
           return (
-            <div>{clothes.image_url}</div>
+            <div>{clothes.imageUrl}</div>
           )
         })}
       </div>

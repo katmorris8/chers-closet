@@ -14,15 +14,14 @@ const User = sequelize.define('user', {
   },
   password: Sequelize.TEXT,
   emailAddress: Sequelize.TEXT
-}
-);
+});
 
 const Clothes = sequelize.define('clothes', {
 clothesType: Sequelize.TEXT,
 storePurchased: Sequelize.TEXT,
 imageUrl: Sequelize.TEXT,
 userId: Sequelize.INTEGER
-})
+});
 
 User.hasMany(Clothes, {onDelete: 'cascade'});
 Clothes.belongsTo(User);

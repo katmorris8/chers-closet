@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import './style.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import ClosetPage from '../ClosetPage';
-import HomePage from '../HomePage';
 
-export default class App extends Component {
+export default class HomePage extends Component {
   render() {
     return (
       <Router>
@@ -16,7 +15,6 @@ export default class App extends Component {
             &nbsp;
             <Link to='/closet'>log into your closet</Link>
           </nav>
-          <Route path='/' exact componenet={HomePage} />
           <Route path='/closet' exact componenet={ClosetPage} />
         </div>
       </Router>
