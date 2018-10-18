@@ -4,22 +4,22 @@ const main = async () => {
   const top1 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top1.jpg',
+    imageUrl: 'images/top1.jpg',
   });
   const top2 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top2.jpg',
+    imageUrl: 'images/top2.jpg',
   });
   const top3 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Everlane',
-    imageUrl: '/images/top3.jpg',
+    imageUrl: 'images/top3.jpg',
   });
   const top4 = await Clothes.create({
     clothesType: 'Tops',
     storePurchased: 'Madewell',
-    imageUrl: '/images/top4.jpg',
+    imageUrl: 'images/top4.jpg',
   });
   const top5 = await Clothes.create({
     clothesType: 'Tops',

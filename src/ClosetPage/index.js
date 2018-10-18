@@ -24,12 +24,16 @@ export default class ClosetPage extends Component {
     return (
       <div>
         <h2>My Closet</h2>
-        {this.state.clothes.map(clothes => {
-          return (
-            <div>{clothes.imageUrl}</div>
-          )
-        })}
+        <div className='closet-container'>
+          {this.state.clothes.map(clothes => {
+            return (
+              <img key={clothes.imageUrl} className='closet-images' src={clothes.imageUrl} />
+            )
+          })}
+        </div>
       </div>
     )
+
   }
 }
+
