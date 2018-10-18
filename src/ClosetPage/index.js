@@ -23,7 +23,7 @@ export default class ClosetPage extends Component {
   render() {
     return (
       <div>
-        <h1>My Closet</h1>
+        <h2>My Closet</h2>
         {this.state.clothes.map(clothes => {
           return (
             <div>{clothes.imageUrl}</div>

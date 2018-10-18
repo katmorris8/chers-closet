@@ -8,14 +8,12 @@ export default class HomePage extends Component {
     return (
       <Router>
         <div>
-          <h1>Cher's Closet</h1>
           <nav>
-            <Link to='/login'>create a closet</Link>
-            &nbsp;
-            &nbsp;
+            {/* <Link to='/login'>create a closet</Link> */}
             <Link to='/closet'>log into your closet</Link>
           </nav>
-          <Route path='/closet' exact componenet={ClosetPage} />
+          {/* <Route path='/' exact component={HomePage} /> */}
+          <Route path='/closet' exact component={ClosetPage} />
         </div>
       </Router>
     )
