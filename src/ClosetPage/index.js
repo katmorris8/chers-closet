@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './style.css';
 import Popup from 'reactjs-popup';
+// import Clothes from '../ClothesPage';
 
 export default class ClosetPage extends Component {
   constructor(props) {
@@ -11,7 +12,6 @@ export default class ClosetPage extends Component {
       imageUrl: '',
       clothesType: '',
       storePurchased: '',
-      clicked: false,
     }
   }
 
@@ -88,7 +88,7 @@ export default class ClosetPage extends Component {
           modal
           closeOnDocumentClick>
 
-          <form className="form" onSubmit={this.submitHandler}>
+          <form className="form">
             <input className="input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
             <input className="input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
             <input className="input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />
@@ -100,19 +100,33 @@ export default class ClosetPage extends Component {
         <button>Edit Profile</button> */}
         <h2>My Closet</h2>
         <div className='closet-container'>
-          <Popup className="closet-image-popup"
-            trigger={this.state.clothes.map(clothes => {
+          {this.state.clothes.map(clothes => {
               return (
-                <button>
+                // <button>
                   <img key={clothes.imageUrl} className='closet-images' src={clothes.imageUrl} alt='Closet Item' />
-                </button>
+                // </button>
               )
             })}
-            modal
-            closeOnDocumentClick>
-          </Popup>
+
         </div>
       </div>
     )
   }
 }
+
+{/* <div className="album-list-container">
+  {this.state.albums.map(album => {
+    let count = 0;
+    return (
+      <Album
+        key={album.id - `${count += 1}`}
+        id={album.id}
+        title={album.title}
+        artist={album.artist}
+        coverPictureSrc={album.coverPictureSrc}
+        addedAlbum={this.state.user.albumId === album.id}
+        onClickAddButton={() => this.addAlbum(album.id)}
+      />
+    )
+  })}
+</div> */}
