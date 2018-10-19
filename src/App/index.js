@@ -7,9 +7,6 @@ export default class App extends Component {
     return (
       <div>
         <h1>Cher's Closet</h1>
-
-
-        
         <HomePage />
       </div>
     )
