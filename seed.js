@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 const { Clothes, User } = require('./models');
 
 const main = async () => {

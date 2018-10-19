@@ -9,7 +9,7 @@ export default class HomePage extends Component {
       <Router>
         <div>
           <nav>
-            {/* <Link to='/login'>create a closet</Link> */}
+            <Link to='/login'>create a closet</Link>
             <Link to='/closet'>log into your closet</Link>
           </nav>
           {/* <Route path='/' exact component={HomePage} /> */}
