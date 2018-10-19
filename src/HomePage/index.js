@@ -37,7 +37,7 @@ export default class HomePage extends Component {
           {
             this.state.isLoggedIn &&
             <nav>
-              <Link to='/closet'>got to my closet</Link>
+              <Link to='/closet'>go to my closet</Link>
             </nav>
           }
 

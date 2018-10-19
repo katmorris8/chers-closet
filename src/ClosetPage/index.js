@@ -90,7 +90,7 @@ export default class ClosetPage extends Component {
 
           <form className="form">
             <input className="input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
-            
+
             <input className="input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
             <input className="input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />
             <button className="input" className="button" onClick={this.submitHandler}>Add to my closet!</button>
@@ -103,31 +103,11 @@ export default class ClosetPage extends Component {
         <div className='closet-container'>
           {this.state.clothes.map(clothes => {
               return (
-                // <button>
                   <img key={clothes.imageUrl} className='closet-images' src={clothes.imageUrl} alt='Closet Item' />
-                // </button>
               )
             })}
-
         </div>
       </div>
     )
   }
 }
-
-{/* <div className="album-list-container">
-  {this.state.albums.map(album => {
-    let count = 0;
-    return (
-      <Album
-        key={album.id - `${count += 1}`}
-        id={album.id}
-        title={album.title}
-        artist={album.artist}
-        coverPictureSrc={album.coverPictureSrc}
-        addedAlbum={this.state.user.albumId === album.id}
-        onClickAddButton={() => this.addAlbum(album.id)}
-      />
-    )
-  })}
-</div> */}
