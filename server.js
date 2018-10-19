@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5678;
 const app = express();
 
 app.use(bodyParser.json());
+const path = require('path');
 app.use("/", express.static("./build/"));
 app.use('/images/', express.static(__dirname + '/images'));
 
@@ -29,3 +30,9 @@ app.get('/api/closet', async (request, response) => {
   const clothes = await Clothes.findAll({});
   response.json(clothes);
 });
+
+if (process.env.NODE_ENV == "production") {
+  app.get("/*", function(request, response) {
+    response.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}

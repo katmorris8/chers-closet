@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize({
-  database: 'chers_closet',
+const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost:5432/chers_closet_db', {
   dialect: 'postgres'
 });
 
