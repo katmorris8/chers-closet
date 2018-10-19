@@ -4,6 +4,20 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import ClosetPage from '../ClosetPage';
 
 export default class HomePage extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      isLoggedIn: false,
+    }
+  }
+
+  getLoggedIn = () => {
+    this.setState({
+      isLoggedIn: true
+    })
+  }
+  
   render() {
     return (
       <Router>
