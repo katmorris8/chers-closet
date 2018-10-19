@@ -10,7 +10,7 @@ import PrivateRoute from '../PrivateRoute';
 export default class HomePage extends Component {
   constructor(props) {
     super(props)
-  
+
     this.state = {
       isLoggedIn: false,
     }
@@ -21,7 +21,7 @@ export default class HomePage extends Component {
       isLoggedIn: true
     })
   }
-  
+
   render() {
     return (
       <Router>
@@ -42,8 +42,8 @@ export default class HomePage extends Component {
           }
 
           {/* <Route path='/' exact component={HomePage} /> */}
-          <Route path="/register" exact render={(props) => <RegistrationPage {...props} getLoggedIn={this.getLoggedIn} />} />
-          <Route path="/login" exact render={(props) => <LoginPage {...props} getLoggedIn={this.getLoggedIn} />} />
+          <Route path="/register" exact render={(props) => <Register {...props} getLoggedIn={this.getLoggedIn} />} />
+          <Route path="/login" exact render={(props) => <Login {...props} getLoggedIn={this.getLoggedIn} />} />
           <PrivateRoute path="/closet" exact component={ClosetPage} />
           <PrivateRoute path="/settings" exact component={Settings} />
         </div>

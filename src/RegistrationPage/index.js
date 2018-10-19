@@ -55,7 +55,6 @@ export default class Register extends Component {
     this.props.getLoggedIn();
   }
 
-
   submitHandler = (e) => {
     e.preventDefault();
   }
@@ -67,7 +66,6 @@ export default class Register extends Component {
   }
 
   render() {
-    console.log('logged in:', this.state.isUserLoggedIn)
     if (this.state.isUserLoggedIn) {
       const { from } = this.props.location.state || { from: { pathname: "/" } };
       return (

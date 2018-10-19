@@ -12,19 +12,33 @@ export default class Login extends Component {
       isUserLoggedIn: false
     }
   }
-
+  
   logIn = async () => {
+    console.log('here!!!');
+    console.log('username: ', this.state.username);
+    console.log('password: ', this.state.password);
+
     const requestBody = JSON.stringify({
       username: this.state.username,
       password: this.state.password,
-    });
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      body: requestBody,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+    })
+    console.log('logged in 1');
+    let response;
+    try {
+      response = await fetch('/api/login', {
+        method: 'POST',
+        body: requestBody,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+    }
+    catch(e) {
+      console.log(e);
+      
+    }
+
+    console.log('logged in 2');
     const responseBody = await response.json();
     if (response.status === 400) {
       this.setState({
@@ -37,11 +51,12 @@ export default class Login extends Component {
       });
       return;
     }
-    localStorage.setItem('user-jwt', JSON.stringify(responseBody.token));
     this.setState({
       isUserLoggedIn: true
     });
+    console.log('logged in');
     this.props.getLoggedIn();
+    localStorage.setItem('user-jwt', JSON.stringify(responseBody.token));
   }
 
   submitHandler = (e) => {
@@ -56,9 +71,9 @@ export default class Login extends Component {
 
   render() {
     if (this.state.isUserLoggedIn) {
-      const { from } = this.props.location.state || { from: { pathname: "/" } };
+      // const { closet } = this.props.location.state || { closet: { pathname: "/closet" } };
       return (
-        <Redirect to={from} />
+        <Redirect to="/closet" />
       )
     }
 
@@ -71,7 +86,7 @@ export default class Login extends Component {
         <form className="form" onSubmit={this.submitHandler} >
           <input className="input" value={this.state.username} onChange={this.onInputChange} type="text" placeholder='Username' name='username' />
           <input className="input" value={this.state.password} onChange={this.onInputChange} type="password" placeholder='Password' name='password' />
-          <button className="input" className='button' type="submit" onClick={this.logIn}>Login</button>
+          <button className="input button" type="submit" onClick={this.logIn}>Login</button>
           {this.state.errorMessage && <p className='error-message'>{this.state.errorMessage}</p>}
         </form>
       </div>

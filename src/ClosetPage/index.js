@@ -90,6 +90,7 @@ export default class ClosetPage extends Component {
 
           <form className="form">
             <input className="input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
+            
             <input className="input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
             <input className="input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />
             <button className="input" className="button" onClick={this.submitHandler}>Add to my closet!</button>

@@ -80,7 +80,7 @@ const main = async () => {
     firstName: 'User',
     lastName: 'Admin',
     username: 'admin',
-    password: 'letmein',
+    passwordDigest: '$2a$12$COXYv/BxVAemDe5WI7nO0eDCasAHOpp7ucW6b0pFVhND8pU85IKXu',
     emailAddress: 'kathryn.leigh.morris@gmail.com'
   })
 

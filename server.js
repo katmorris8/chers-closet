@@ -56,18 +56,25 @@ app.post('/api/register', async (request, response) => {
 
 app.post('/api/login', async (request, response) => {
   const { username, password } = request.body;
+  console.log('check 1', username);
+  
   if (!username || !password) {
     response.status(401).json({
-      error: "Login requires a username and password in the request body."
+      error: "Login requires a username and password."
     });
     return;
   }
+  console.log('check 2');
   const existingUser = await User.findOne({
     where: {
       username: username
     }
   });
 
+  console.log(existingUser, 'existinggggg');
+  
+
+  console.log('check 3');
   if (existingUser === null) {
     response.status(400).json({
       message: "Invalid username or password."
@@ -75,15 +82,22 @@ app.post('/api/login', async (request, response) => {
     return;
   }
 
+
+  console.log('check 4');
+
   const isPasswordCorrect = await bcrypt.compare(password, existingUser.passwordDigest);
   if (isPasswordCorrect) {
     const token = jwt.sign({ userId: existingUser.id }, jwtSecret);
+
+    console.log('do something a;sfksldkasdkl;afskdjfal;daj');
+    
+
     response.json({
       token: token
     });
   } else {
     response.status(401).json({
-      message: "Invalid username or Password."
+      message: "Invalid username or password."
     })
   }
 });
@@ -104,7 +118,7 @@ app.get('/api/closet', async (request, response) => {
 });
 
 if (process.env.NODE_ENV == "production") {
-  app.get("/*", function(request, response) {
+  app.get("/*", function (request, response) {
     response.sendFile(path.join(__dirname, "build", "index.html"));
   });
 }
