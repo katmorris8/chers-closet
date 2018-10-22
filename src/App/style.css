@@ -1,3 +1,61 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Dosis', sans-serif;
+  color: #333333;
+}
+
+.homepage {
+  background-image: url("/images/home-bg.jpg") no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.header {
+  text-align: center;
+}
+
+.nav {
+  font-size: 20px;
+  padding: 16px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.nav:hover {
+  color: yellow;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #979797;
+}
+
+.input {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+}
+
+.button {
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: yellow;
+}
+
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+}

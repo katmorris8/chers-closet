@@ -80,8 +80,8 @@ export default class ClosetPage extends Component {
 
   render() {
     return (
-      <div>
-        {/* <button>Logout</button> */}
+      <div className="closet-page">
+          <h2>My Closet</h2>
 
         <Popup className="add-item-form"
           trigger={<button className="button">Add New Garment</button>}
@@ -89,17 +89,17 @@ export default class ClosetPage extends Component {
           closeOnDocumentClick>
 
           <form className="form">
-            <input className="input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
+            <h3>Add a new garment to your closet!</h3>
+            <input className="popup-input input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
 
-            <input className="input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
-            <input className="input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />
-            <button className="input" className="button" onClick={this.submitHandler}>Add to my closet!</button>
+            <input className="popup-input input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
+            <input className="popup-input input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />
+            <button className="popup-input input button" onClick={this.submitHandler}>Add to my closet!</button>
           </form>
         </Popup>
 
         {/* <button>Remove Garment</button>
         <button>Edit Profile</button> */}
-        <h2>My Closet</h2>
         <div className='closet-container'>
           {this.state.clothes.map(clothes => {
               return (

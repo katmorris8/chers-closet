@@ -1,12 +1,30 @@
+.closet-page {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .closet-container {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .closet-images {
   width: 20%;
   height: 100%;
   margin: 5px;
+}
+
+.closet-images:hover {
+  opacity: .6;
+}
+
+.popup-input {
+  width: 80%;
+  margin: 5px auto;
+}
+
+.form {
+  padding: 20px;
 }

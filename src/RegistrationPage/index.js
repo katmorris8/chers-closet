@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import PrivateRoute from '../PrivateRoute';
-import HomePage from '../HomePage';
 import "./style.css";
+import App from '../App';
 
 export default class Register extends Component {
   constructor(props) {
@@ -85,10 +85,10 @@ export default class Register extends Component {
           <input className="input" value={this.state.username} onChange={this.onInputChange} type="text" placeholder='Username' name='username' />
           <input className="input" value={this.state.password} onChange={this.onInputChange} type="password" placeholder='Password' name='password' />
           {console.log(this.state.errorMessage)}
-          <button className='submit-btn button' type="submit" onClick={this.register}>Register</button>
+          <button className='submit-btn input button' type="submit" onClick={this.register}>Register</button>
           {this.state.errorMessage && <p className='error-message'>{this.state.errorMessage}</p>}
         </form>
-        <PrivateRoute path='/' exact component={HomePage} />
+        <PrivateRoute path='/' exact component={App} />
       </div>
     )
   }

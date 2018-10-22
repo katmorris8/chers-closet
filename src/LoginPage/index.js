@@ -71,7 +71,6 @@ export default class Login extends Component {
 
   render() {
     if (this.state.isUserLoggedIn) {
-      // const { closet } = this.props.location.state || { closet: { pathname: "/closet" } };
       return (
         <Redirect to="/closet" />
       )
