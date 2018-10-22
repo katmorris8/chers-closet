@@ -23,9 +23,16 @@ export default class App extends Component {
   }
 
   render() {
+    // ideally move into using react history
+    const style = {
+      backgroundImage: window.location.pathname === '/closet' ? '' : 'url(/images/home-bg.jpg)',
+      color: window.location.pathname === '/closet' ? '#333333' : 'white'
+    }
+        
+
     return (
       <Router>
-        <div className="homepage">
+        <div className="homepage" style={style}>
           <h1 className="title header">Cher's Closet</h1>
           {
             !this.state.isLoggedIn &&

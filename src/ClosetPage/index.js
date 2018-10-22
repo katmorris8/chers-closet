@@ -79,6 +79,9 @@ export default class ClosetPage extends Component {
   }
 
   render() {
+    console.log(this.props.history.location.pathname);
+    
+
     return (
       <div className="closet-page">
           <h2>My Closet</h2>

@@ -4,17 +4,22 @@
 
 body {
   font-family: 'Dosis', sans-serif;
-  color: #333333;
+  color: white;
+  margin: 0;
 }
 
 .homepage {
-  background-image: url("/images/home-bg.jpg") no-repeat fixed;
   background-size: cover;
-  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .title {
   font-size: 48px;
+  margin: 0;
+  padding: 40px;
+  text-shadow: 2px 2px 2px #979797;
 }
 
 .header {
@@ -25,7 +30,8 @@ body {
   font-size: 20px;
   padding: 16px;
   text-decoration: none;
-  color: #333333;
+  color: white;
+  text-shadow: 2px 2px 2px #979797;
 }
 
 .nav:hover {
@@ -58,4 +64,8 @@ body {
 .logout-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.form-page {
+  margin: 40px;
 }
