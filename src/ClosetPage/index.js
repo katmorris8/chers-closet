@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './style.css';
 import Popup from 'reactjs-popup';
-// import Clothes from '../ClothesPage';
 
 export default class ClosetPage extends Component {
   constructor(props) {
@@ -27,6 +26,7 @@ export default class ClosetPage extends Component {
     this.setState({
       clothesType: e.target.value,
     })
+    console.log(`clothes type: ${this.state.clothesType}`);
   }
 
   getStorePurchased = e => {
@@ -79,9 +79,7 @@ export default class ClosetPage extends Component {
   }
 
   render() {
-    console.log(this.props.history.location.pathname);
     
-
     return (
       <div className="closet-page">
           <h2>My Closet</h2>
@@ -94,6 +92,19 @@ export default class ClosetPage extends Component {
           <form className="form">
             <h3>Add a new garment to your closet!</h3>
             <input className="popup-input input" type='text' onChange={this.getClothesType} placeholder='Item Type' />
+            
+            <label className="popup-input input radio-btn-label" >
+              <input className="radio-btn" type='radio' name='item-type' value='top' onClick={this.getClothesType}></input>
+              Top
+            </label>
+            <label className="popup-input input radio-btn-label" onClick={this.getClothesType} >
+              <input className="radio-btn" type='radio' name='item-type' value='bottom' ></input>
+              Bottom
+            </label>
+            <label className="popup-input input radio-btn-label" onClick={this.getClothesType} >
+              <input className="radio-btn" type='radio' name='item-type' value='shoes' ></input>
+              Shoes
+            </label>
 
             <input className="popup-input input" type='text' onChange={this.getStorePurchased} placeholder='Store Purchased' />
             <input className="popup-input input" type='text' onChange={this.getImageUrl} placeholder='Image URL' />

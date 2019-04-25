@@ -26,6 +26,10 @@
   margin: 5px auto;
 }
 
+.radio-btn-label {
+  display: flex;
+}
+
 .form {
   padding: 20px;
 }

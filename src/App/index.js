@@ -51,7 +51,6 @@ export default class App extends Component {
             </div>
           }
 
-          {/* <Route path='/' exact component={HomePage} /> */}
           <Route path="/register" exact render={(props) => <Register {...props} getLoggedIn={this.getLoggedIn} />} />
           <Route path="/login" exact render={(props) => <Login {...props} getLoggedIn={this.getLoggedIn} />} />
           <PrivateRoute path="/closet" exact component={ClosetPage} />
